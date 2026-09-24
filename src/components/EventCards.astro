@@ -1,0 +1,70 @@
+---
+/**
+ * Renders the homepage "Recent Events" cards from src/data/events.json
+ * (newest first, as listed in the file). Replaces the Sanity-managed cards
+ * so that adding an event only requires editing events.json.
+ */
+import events from '@data/events.json';
+import Section from '@components/Section.astro';
+
+interface Props {
+    heading?: string;
+    count?: number;
+    theme?: string;
+    width?: string;
+    backgroundImage?: any;
+    'data-sb-field-path'?: string;
+}
+
+const { heading = 'Recent Events', count = 6, 'data-sb-field-path': _fp, ...rest } = Astro.props;
+const recent = events.slice(0, count);
+
+// Rotate through daisyUI badge colours so neighbouring cards differ
+const badgeThemes = ['badge-accent', 'badge-primary', 'badge-neutral', 'badge-accent', 'badge-primary', 'badge-secondary'];
+---
+
+<Section {...rest} class="text-center">
+    <h2 class="text-2xl font-black sm:text-4xl text-balance">{heading}</h2>
+    <div class="mx-auto mt-4 max-w-prose markdown">
+        <p><a href="/events"><strong>Previous Events</strong></a></p>
+    </div>
+    <div class="mt-8 grid gap-8 justify-items-center md:grid-cols-3">
+        {
+            recent.map((e, i) => (
+                <div class="card card-bordered w-full max-w-2xl flex-1">
+                    {e.image && (
+                        <figure>
+                            <img src={e.image} alt={e.speaker} loading="lazy" class="w-full aspect-[3/2] object-cover" />
+                        </figure>
+                    )}
+                    <div class="card-body gap-4 text-left">
+                        {e.tag && (
+                            <div class:list={['badge h-auto px-3 py-1 text-xs uppercase tracking-wider', badgeThemes[i % badgeThemes.length]]}>
+                                <span>{e.tag}</span>
+                            </div>
+                        )}
+                        <h3 class="font-black card-title sm:text-2xl">{e.title}</h3>
+                        <div class="markdown">
+                            <p>
+                                Prof.{' '}
+                                {e.speakerUrl ? (
+                                    <a href={e.speakerUrl} target="_blank" rel="noopener">
+                                        {e.speaker}
+                                    </a>
+                                ) : (
+                                    e.speaker
+                                )}{' '}
+                                from {e.affiliation}
+                            </p>
+                        </div>
+                        <div class="card-actions items-center">
+                            <a href={`/events#${e.slug}`} class="text-neutral font-bold underline hover:no-underline">
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</Section>

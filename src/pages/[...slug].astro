@@ -2,6 +2,7 @@
 import type { Page } from 'types';
 import Layout from '@layouts/Layout.astro';
 import Cards from '@components/Cards.astro';
+import EventCards from '@components/EventCards.astro';
 import Cta from '@components/Cta.astro';
 import Hero from '@components/Hero.astro';
 import Logos from '@components/Logos.astro';
@@ -40,6 +41,12 @@ const componentMap = {
             <div data-sb-object-id={_id}>
                 {sections?.length &&
                     sections.map((section, idx) => {
+                        // The "Recent Events" cards are generated from src/data/events.json
+                        // instead of Sanity, so events are managed entirely in GitHub.
+                        if (section._type === 'cardsSection' && section.heading === 'Recent Events') {
+                            const { items, body, ...rest } = section;
+                            return <EventCards {...rest} data-sb-field-path={`sections.${idx}`} />;
+                        }
                         const Component = componentMap[section._type];
                         return <Component {...section} data-sb-field-path={`sections.${idx}`} />;
                     })}

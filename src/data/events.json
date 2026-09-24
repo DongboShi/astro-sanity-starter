@@ -1,7 +1,21 @@
 [
   {
+    "slug": "rogan-2026",
+    "year": "2026",
+    "tag": "Network",
+    "title": "Self-Affirmation and Network Behavior: A Field Experiment of Women Entrepreneurs in Kazakhstan",
+    "time": "TBD",
+    "speaker": "Michelle Rogan",
+    "speakerUrl": "https://www.sbs.ox.ac.uk/about-us/people/michelle-rogan",
+    "affiliation": "University of Oxford",
+    "image": "/images/events/rogan-2026.jpg",
+    "abstract": "",
+    "bio": ""
+  },
+  {
     "slug": "poskanzer-2024",
     "year": "2024",
+    "tag": "Luck",
     "title": "The Luck Factor: Random External Influences Shape Evaluations of Innovative Startups",
     "time": "Friday Dec. 20th, 9:00am, Beijing/HK Time",
     "speaker": "Ethan Poskanzer",
@@ -14,6 +28,7 @@
   {
     "slug": "subramani-2024",
     "year": "2024",
+    "tag": "Migration",
     "title": "Migration and Local Problem-Solving",
     "time": "Saturday Nov. 23rd, 9:00am, Beijing/HK Time",
     "speaker": "Gauri Subramani",
@@ -26,6 +41,7 @@
   {
     "slug": "conti-2024",
     "year": "2024",
+    "tag": "Incentives",
     "title": "Incentivizing Innovation in Open Source: Evidence from the GitHub Sponsors Program",
     "time": "Thursday Sep. 12th, 4:00pm, Beijing/HK Time",
     "speaker": "Annamaria Conti",
@@ -38,6 +54,7 @@
   {
     "slug": "yu-2023",
     "year": "2023",
+    "tag": "Accelerators",
     "title": "Do Accelerators Also Benefit Entrepreneurs' Future Careers?",
     "time": "Friday Mar. 24th, 9:00–10:15am, Beijing/HK Time",
     "speaker": "Sandy Yu",
@@ -50,6 +67,7 @@
   {
     "slug": "liu-2022",
     "year": "2022",
+    "tag": "Labs",
     "title": "Accounting for the Lab: Determinants of Grant Funding and Lab Return on Assets (LabROA)",
     "time": "Saturday Dec 17th, 9:30–10:45am, Beijing Time",
     "speaker": "Chris Liu",
@@ -62,6 +80,7 @@
   {
     "slug": "dakhlallah-2022",
     "year": "2022",
+    "tag": "Bribery",
     "title": "Social Incentives Make it Difficult to Coordinate and Normalise Bribery inside Organisations",
     "time": "Friday, Nov 25th, 8:00–9:15pm, HK/Beijing Time",
     "speaker": "Diana Dakhlallah",
@@ -74,6 +93,7 @@
   {
     "slug": "zhao-2022",
     "year": "2022",
+    "tag": "Patents",
     "title": "Why is Global Patent Litigation Geographically Concentrated?",
     "time": "Saturday May 21st, 9:30–10:45am, Beijing Time",
     "speaker": "Minyuan Zhao",
@@ -86,6 +106,7 @@
   {
     "slug": "dahlander-2022",
     "year": "2022",
+    "tag": "Selection",
     "title": "Selection Regimes and Selection Errors: a Multi-method Study",
     "time": "Saturday May 21st, 9:30–10:45am, Beijing Time",
     "speaker": "Linus Dahlander",
@@ -98,6 +119,7 @@
   {
     "slug": "ganguli-2022",
     "year": "2022",
+    "tag": "Minimum wage",
     "title": "The Effect of Minimum Wage Changes on Scientific Production",
     "time": "Friday March 25th, 8:30–9:45am, Beijing Time",
     "speaker": "Ina Ganguli",
@@ -110,6 +132,7 @@
   {
     "slug": "wagner-2022",
     "year": "2022",
+    "tag": "Science",
     "title": "Science beyond the Nation-State: The Network of Scholarly Communications",
     "time": "Saturday March 12th, 9:00–10:00am, Beijing Time",
     "speaker": "Caroline Wagner",
@@ -122,6 +145,7 @@
   {
     "slug": "botelho-2022",
     "year": "2022",
+    "tag": "Founders",
     "title": "The Evaluation of Founder Failure and Success by Hiring Firms: A Field Experiment",
     "time": "Friday February 11th, 10:00–11:15am, Beijing Time",
     "speaker": "Tristan L. Botelho",
@@ -134,6 +158,7 @@
   {
     "slug": "fehder-2022",
     "year": "2022",
+    "tag": "Venture capital",
     "title": "The Virtuous Cycle of Innovation and Capital",
     "time": "Saturday January 29th, 10:00–11:15am, Beijing Time",
     "speaker": "Daniel Fehder",
@@ -146,6 +171,7 @@
   {
     "slug": "chai-2021",
     "year": "2021",
+    "tag": "Narratives",
     "title": "Managing the Promise–Risk Tension: Recrafting Narratives of Innovation after Catastrophic Failure",
     "time": "Friday Nov. 12th, 9:00–10:15am, Beijing Time",
     "speaker": "Sen Chai",
