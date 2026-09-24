@@ -1,0 +1,91 @@
+---
+import Layout from '@layouts/Layout.astro';
+import events from '@data/events.json';
+
+// Group events by year, newest year first (order within a year follows the JSON file)
+const years = [...new Set(events.map((e) => e.year))].sort((a, b) => Number(b) - Number(a));
+const byYear = Object.fromEntries(years.map((y) => [y, events.filter((e) => e.year === y)]));
+---
+
+<Layout title="Events" description="Past talks of the China Innovation Seminar: speakers, abstracts and speaker biographies.">
+    <!-- Page header -->
+    <section class="w-full px-3 sm:px-6">
+        <div class="relative py-16 mx-auto max-w-7xl rounded-box sm:py-24 text-center" data-theme="dark">
+            <div class="relative w-10/12 mx-auto">
+                <h1 class="text-4xl font-black sm:text-6xl text-balance">Events</h1>
+                <p class="mt-6 max-w-prose mx-auto text-lg">All past talks of the China Innovation Seminar, with abstracts and speaker biographies.</p>
+                <nav class="mt-8 flex flex-wrap items-center justify-center gap-3" aria-label="Jump to year">
+                    {years.map((y) => (
+                        <a href={`#year-${y}`} class="btn btn-sm btn-primary px-4 h-auto min-h-0 py-2">{y}</a>
+                    ))}
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events list -->
+    <section class="relative w-full px-3 py-16 sm:px-6 sm:py-24">
+        <div class="relative mx-auto max-w-5xl">
+            {
+                years.map((y) => (
+                    <div class="mb-16 last:mb-0">
+                        <h2 id={`year-${y}`} class="text-3xl font-black sm:text-4xl scroll-mt-8 mb-8">{y}</h2>
+                        <div class="flex flex-col gap-8">
+                            {byYear[y].map((e) => (
+                                <article id={e.slug} class="card card-bordered w-full scroll-mt-8">
+                                    <div class="card-body gap-4 p-6 sm:p-8">
+                                        <div class="flex flex-col gap-6 md:flex-row md:items-start">
+                                            {e.image && (
+                                                <figure class="shrink-0 md:w-56">
+                                                    <img
+                                                        src={e.image}
+                                                        alt={e.speaker}
+                                                        loading="lazy"
+                                                        class="w-full max-w-xs mx-auto md:mx-0 rounded-box object-cover aspect-[3/2]"
+                                                    />
+                                                </figure>
+                                            )}
+                                            <div class="flex-1 min-w-0">
+                                                <h3 class="font-black text-xl sm:text-2xl text-balance">{e.title}</h3>
+                                                <p class="mt-3">
+                                                    <span class="font-bold">Time:</span> {e.time}
+                                                </p>
+                                                <p class="mt-1">
+                                                    <span class="font-bold">Speaker:</span> Prof.{' '}
+                                                    {e.speakerUrl ? (
+                                                        <a href={e.speakerUrl} target="_blank" rel="noopener" class="underline hover:no-underline">
+                                                            {e.speaker}
+                                                        </a>
+                                                    ) : (
+                                                        e.speaker
+                                                    )}{' '}
+                                                    from {e.affiliation}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {e.abstract && (
+                                            <details class="collapse collapse-arrow border border-base-200 bg-base-100">
+                                                <summary class="collapse-title font-bold">Abstract</summary>
+                                                <div class="collapse-content">
+                                                    <p class="text-pretty">{e.abstract}</p>
+                                                </div>
+                                            </details>
+                                        )}
+                                        {e.bio && (
+                                            <details class="collapse collapse-arrow border border-base-200 bg-base-100">
+                                                <summary class="collapse-title font-bold">About the speaker</summary>
+                                                <div class="collapse-content">
+                                                    <p class="text-pretty">{e.bio}</p>
+                                                </div>
+                                            </details>
+                                        )}
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+</Layout>
