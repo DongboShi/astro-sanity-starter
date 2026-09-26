@@ -1,5 +1,18 @@
 [
   {
+    "slug": "esposito-2026",
+    "year": "2026",
+    "tag": "Self-reliance",
+    "title": "The Falling Dependence of Chinese Innovation on U.S. Science",
+    "time": "Friday Oct. 2nd, 8:30pm, Beijing/HK Time",
+    "speaker": "Christopher Esposito",
+    "speakerUrl": "https://cresposito.com/",
+    "affiliation": "Georgia Institute of Technology",
+    "image": "/images/events/esposito-2026.jpg",
+    "abstract": "China has emerged as a leading producer of new technologies, yet the extent to which its innovation depends on domestic versus foreign science has never been examined at scale. We investigated three complementary dimensions of self-dependence—availability, origination, and sufficiency. First, we used natural language processing to link all 6.7 million Chinese invention patents to 38 million scientific publications through shared scientific phrases. We found that the share of Chinese patents linking to domestically produced articles rose from 2.5% in 2000 to 25.6% in 2025, overtaking the U.S.-linked share in 2022. This result holds after accounting for science quality, phrase specificity, phrase rigor, patent quality, science quantity, and idiomatic differences, and extends to security-critical technologies and to China's flagship firms and universities. Second, we discovered that Chinese scientists are not merely copying foreign-originated phrases, but became the leading originators of new phrases in China's patents in 2018. Third, analyzing a sample of Chinese patents that contain administrative information on the substitutability of individual scientific inputs, we found that the share of patent claims for which Chinese science would suffice to fully anticipate the claim more than doubled between 2010 and 2022. By demonstrating the falling dependence of Chinese innovation on U.S. science along its availability, origination, and sufficiency, our findings raise important considerations for diplomatic efforts centered around global competition for technological leadership.",
+    "bio": "Prof. Esposito is an Assistant Professor in the Jimmy and Rosalynn Carter School of Public Policy at the Georgia Institute of Technology. He was previously the Osborne Postdoctoral Fellow at UCLA's Anderson School of Management, where he was affiliated with the Price Center for Entrepreneurship and Innovation, and before that a postdoctoral fellow at the Mansueto Institute for Urban Innovation and the Knowledge Lab at the University of Chicago. He received his Ph.D. from the UCLA Department of Geography in 2021. Chris uses computational and econometric methods to study global competition in science and technology and its consequences for innovation policy. His current work maps the shifting balance of scientific and technological power among nations, including China's growing self-reliance in science and the dependence of U.S. innovation on the global scientific system."
+  },
+  {
     "slug": "rogan-2026",
     "year": "2026",
     "tag": "Network",
